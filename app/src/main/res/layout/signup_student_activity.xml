@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_marginBottom="40dp"/>
+
+<!--            Full Name-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="25dp">
+
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/user" />
+
+                <EditText
+                    android:id="@+id/stud_signup_firstname"
+                    android:layout_width="117dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:hint="First Name"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    style="@style/inputBoxText"/>
+
+                <EditText
+                    android:id="@+id/stud_signup_lastname"
+                    android:layout_width="117dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:hint="Last Name"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    style="@style/inputBoxText"/>
+
+            </LinearLayout>
+
+<!--USERNAME            -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="25dp">
+
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/user" />
+
+                <EditText
+                    android:id="@+id/stud_signup_username"
+                    android:layout_width="236dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:hint="Enter a username"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    style="@style/inputBoxText"/>
+
+            </LinearLayout>
+
+<!--EMAIL               -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="25dp">
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/email" />
+
+                <EditText
+                    android:id="@+id/stud_signup_email"
+                    android:layout_width="236dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:hint="Enter your email"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    style="@style/inputBoxText" />
+            </LinearLayout>
+
+<!--PASSWORD            -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="25dp">
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/password" />
+
+                <EditText
+                    android:id="@+id/stud_signup_password"
+                    android:layout_width="236dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:hint="Create a password"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionNext"
+                    style="@style/inputBoxText" />
+            </LinearLayout>
+
+<!--CONFIRM PASSWORD    -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="25dp">
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/password" />
+
+                <EditText
+                    android:id="@+id/stud_signup_password_confirm"
+                    android:layout_width="236dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:hint="Confirm your password"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionDone"
+                    style="@style/inputBoxText" />
+            </LinearLayout>
+
+<!--SIGNUP BUTTON   -->
+            <Button
+                android:id="@+id/signup_button"
+                style="@style/LoginButton"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="25dp"
+                android:text="Signup"/>
+
+<!--Already have an account?-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already have an account? "
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_regular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/login_redirect_text"
+                    android:text="Login"
+                    android:textSize="16sp"
+                    android:textColor="@color/login_signup_redirect"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:clickable="true" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

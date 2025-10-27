@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="listItem4" type="id" />
+    <item name="linearLayout5" type="id" />
+    <item name="listItem3" type="id" />
+    <item name="listItem2" type="id" />
+    <item name="listItem1" type="id" />
+    <item name="navButtonsRow" type="id" />
+    <item name="linearLayout8" type="id" />
+    <item name="linearLayout7" type="id" />
+    <item name="linearLayout6" type="id" />
+    <item name="linearLayout9" type="id" />
+    <item name="searchBar" type="id" />
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/home_agreement"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/menu_list"
+        android:icon="@drawable/list"
+        android:title="List" />
+
+    <item
+        android:id="@+id/menu_leaderboard"
+        android:icon="@drawable/throphy"
+        android:title="Leaderboard" />
+
+    <item
+        android:id="@+id/menu_thread"
+        android:icon="@drawable/people"
+        android:title="Thread" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/user"
+        android:title="Profile" />
+
+
+</menu>

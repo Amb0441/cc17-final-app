@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bronze">#AD8A56</color>
+    <color name="gold">#C9B037</color>
+    <color name="silver">#B4B4B4</color>
+    <color name="teal">#14B8A6</color>
+    <color name="blueblack">#1F2937</color>
+    <color name="startColor">#FF14B8A6</color>
+    <color name="endColor">#FFFAFAFA</color>
+    <color name="buttonColor">#FF14B8A6</color>
+    <color name="textInputColor">#FFF3F3F3</color>
+    <color name="login_signup_redirect">#FF20CFBD</color>
+</resources>
