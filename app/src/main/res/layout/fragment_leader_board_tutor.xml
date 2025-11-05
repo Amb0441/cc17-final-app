@@ -8,17 +8,21 @@
     tools:context=".MainActivity">
 
     <!-- Top App Bar Section -->
+
+    <!-- Top 3 Users Section -->
+
+    <!-- Teal Leaderboard List Section, rounded top corners -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topBar"
-        android:layout_width="0dp"
-        android:layout_height="72dp"
+        android:layout_width="410dp"
+        android:layout_height="52dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/top3_row"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
 
 
         <!-- Centered Title -->
@@ -39,18 +43,17 @@
             app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Top 3 Users Section -->
     <LinearLayout
         android:id="@+id/top3_row"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/topBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
 
         <!-- Bronze (3rd) Card -->
         <com.google.android.material.card.MaterialCardView
@@ -65,8 +68,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:gravity="center_horizontal"
+                android:orientation="vertical"
                 android:padding="8dp">
 
                 <!-- Medal Indicator -->
@@ -74,19 +77,19 @@
                     android:id="@+id/bronze_medal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
+                    android:background="@drawable/lb_1st"
                     android:padding="4dp"
-                    android:textStyle="bold"
-                    android:background="@drawable/lb_1st"/>
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
 
                 <!-- Profile Image -->
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_bronze"
                     android:layout_width="54dp"
                     android:layout_height="54dp"
-                    android:src="@drawable/user"
                     android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"/>
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/user" />
 
                 <!-- Name -->
                 <TextView
@@ -103,10 +106,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
                     android:text="1460 pts"
                     android:textColor="@color/blueblack"
-                    android:textSize="12sp"
-                    android:layout_marginTop="2dp"/>
+                    android:textSize="12sp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -115,8 +118,8 @@
             android:id="@+id/card_gold"
             android:layout_width="100dp"
             android:layout_height="180dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             app:cardBackgroundColor="@color/gold"
             app:cardCornerRadius="18dp"
             app:cardElevation="8dp">
@@ -124,25 +127,26 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:gravity="center_horizontal"
+                android:orientation="vertical"
                 android:padding="8dp">
 
                 <TextView
                     android:id="@+id/gold_medal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
+                    android:background="@drawable/lb_1st"
                     android:padding="4dp"
-                    android:textStyle="bold"
-                    android:background="@drawable/lb_1st"/>
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_gold"
                     android:layout_width="54dp"
                     android:layout_height="54dp"
-                    android:src="@drawable/user"
                     android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"/>
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/user" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -153,13 +157,14 @@
                     android:textColor="@color/blueblack"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
                     android:text="2050 pts"
                     android:textColor="@color/blueblack"
-                    android:textSize="13sp"
-                    android:layout_marginTop="2dp"/>
+                    android:textSize="13sp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -176,25 +181,26 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:gravity="center_horizontal"
+                android:orientation="vertical"
                 android:padding="8dp">
 
                 <TextView
                     android:id="@+id/silver_medal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
+                    android:background="@drawable/lb_1st"
                     android:padding="4dp"
-                    android:textStyle="bold"
-                    android:background="@drawable/lb_1st"/>
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_silver"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:src="@drawable/user"
                     android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"/>
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/user" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -205,18 +211,18 @@
                     android:textColor="@color/blueblack"
                     android:textSize="13sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
                     android:text="1800 pts"
                     android:textColor="@color/blueblack"
-                    android:textSize="12sp"
-                    android:layout_marginTop="2dp"/>
+                    android:textSize="12sp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
-    <!-- Teal Leaderboard List Section, rounded top corners -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/leaderboard_container"
         android:layout_width="0dp"

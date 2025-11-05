@@ -31,19 +31,19 @@
                 android:fontFamily="@font/nunito_bold"
                 android:layout_marginBottom="40dp"/>
 
-            <!--USERNAME            -->
+            <!--EMAIL (Changed from USERNAME)-->
             <EditText
                 android:id="@+id/login_username"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="30dp"
-                android:hint="Enter your username"
-                android:inputType="text"
+                android:hint="Enter your email"
+                android:inputType="textEmailAddress"
                 android:imeOptions="actionNext"
                 style="@style/inputBoxText"/>
 
-            <!--PASSWORD    -->
+            <!--PASSWORD-->
             <EditText
                 android:id="@+id/login_password"
                 android:layout_width="match_parent"
@@ -55,16 +55,19 @@
                 style="@style/inputBoxText"/>
 
             <TextView
+                android:id="@+id/forgot_password_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Forgot password? "
                 android:textSize="16sp"
                 android:gravity="center"
-                android:fontFamily="@font/roboto_regular"/>
+                android:fontFamily="@font/roboto_regular"
+                android:clickable="true"
+                android:focusable="true"/>
 
 
-            <!--SIGNIN BUTTON   -->
+            <!--SIGNIN BUTTON-->
             <Button
                 android:id="@+id/login_button"
                 style="@style/LoginButton"
@@ -74,7 +77,7 @@
                 android:layout_margin="25dp"
                 android:text="Login"/>
 
-            <!--Already have an account?-->
+            <!--Don't have an account?-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -102,7 +105,8 @@
                     android:textColor="@color/login_signup_redirect"
                     android:gravity="center"
                     android:fontFamily="@font/roboto_regular"
-                    android:clickable="true" />
+                    android:clickable="true"
+                    android:focusable="true"/>
 
             </LinearLayout>
 

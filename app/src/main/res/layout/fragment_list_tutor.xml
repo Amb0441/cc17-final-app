@@ -13,54 +13,6 @@
         android:padding="16dp">
 
         <!-- Top Bar -->
-        <LinearLayout
-            android:id="@+id/topIconsBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp">
-
-            <FrameLayout
-                android:id="@+id/notificationIconContainer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:focusable="true"
-                android:padding="8dp">
-                <ImageView
-                    android:id="@+id/notificationIcon"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:contentDescription="Notification"
-                    android:src="@drawable/bell" />
-            </FrameLayout>
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <FrameLayout
-                android:id="@+id/settingsIconContainer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:focusable="true"
-                android:padding="8dp">
-                <ImageView
-                    android:id="@+id/settingsIcon"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:contentDescription="Settings"
-                    android:src="@drawable/setting" />
-            </FrameLayout>
-        </LinearLayout>
 
         <!-- Search Bar -->
         <androidx.cardview.widget.CardView
