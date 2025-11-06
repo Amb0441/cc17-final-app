@@ -34,23 +34,36 @@ class SignInActivity : AppCompatActivity() {
             val email = emailInput.text.toString().trim()
             val password = passwordInput.text.toString().trim()
 
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
+            // ✅ Validation
+            when {
+                email.isEmpty() -> {
+                    emailInput.error = "Email is required"
+                    return@setOnClickListener
+                }
+                !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
+                    emailInput.error = "Invalid email format"
+                    return@setOnClickListener
+                }
+                !email.endsWith("@gmail.com", ignoreCase = true) -> {
+                    emailInput.error = "Only Gmail addresses are allowed"
+                    return@setOnClickListener
+                }
+                password.isEmpty() -> {
+                    passwordInput.error = "Password is required"
+                    return@setOnClickListener
+                }
             }
 
+            // ✅ Proceed to Firebase sign-in only if Gmail is valid
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         val userId = auth.currentUser?.uid
-
                         if (userId != null) {
-                            // Fetch user type from Firestore
                             db.collection("users").document(userId).get()
                                 .addOnSuccessListener { document ->
                                     if (document.exists()) {
                                         val userType = document.getString("userType")
-
                                         Toast.makeText(
                                             this,
                                             "Welcome back, $userType!",

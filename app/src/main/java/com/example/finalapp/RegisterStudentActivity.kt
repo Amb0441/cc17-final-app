@@ -47,7 +47,8 @@ class RegisterStudentActivity : AppCompatActivity() {
                 lastName.isEmpty() -> lastNameInput.error = "Last name is required"
                 username.isEmpty() -> usernameInput.error = "Username is required"
                 email.isEmpty() -> emailInput.error = "Email is required"
-                !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() -> emailInput.error = "Invalid email"
+                !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() -> emailInput.error = "Invalid email format"
+                !email.endsWith("@gmail.com", ignoreCase = true) -> emailInput.error = "Only Gmail addresses are allowed"
                 password.length < 6 -> passwordInput.error = "Password must be 6+ characters"
                 password != confirmPassword -> confirmPasswordInput.error = "Passwords do not match"
                 else -> registerStudent(firstName, lastName, username, email, password)
